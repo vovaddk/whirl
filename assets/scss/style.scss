@@ -1,0 +1,1005 @@
+// Змінні для кольорів та шрифтів
+$color-primary: #0070a0;
+$color-bg: #fff;
+$color-text: #1f1f1f;
+$color-link: #33383f;
+$color-border: #d9dee3;
+$font-main: 'Inter', sans-serif;
+
+// Глобальні скидання
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Базові блоки з фоном
+.features,
+.header,
+.hero,
+.hero-image {
+  background-color: $color-bg;
+}
+
+// Акордеон
+.accordion-block,
+.accordion-item {
+  border-bottom: 1px solid $color-border;
+}
+
+// Header і навігація
+.header,
+.nav {
+  display: flex;
+}
+
+.header {
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 15%;
+  height: 75px;
+  gap: 40px;
+
+  .logo {
+    width: 106px;
+    height: 37px;
+    flex-shrink: 0;
+  }
+
+  .nav {
+    gap: 24px;
+    flex-grow: 1;
+
+    a {
+      color: $color-link;
+      font-size: 15px;
+      font-family: $font-main;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+      line-height: 24px;
+      text-decoration: none;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 16px;
+
+    a {
+      align-items: center;
+      display: flex;
+      padding: 8px 20px;
+      border-radius: 5px;
+      height: 36px;
+      justify-content: center;
+      font-size: 15px;
+      font-family: $font-main;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+      line-height: 24px;
+      text-decoration: none;
+
+      &.sign-in {
+        color: $color-primary;
+      }
+
+      &.book-demo {
+        background-color: $color-primary;
+        color: $color-bg;
+      }
+    }
+  }
+}
+
+// Hero section — вкладеність для заголовка та параграфа
+.hero-content {
+  h1,
+  p {
+    color: $color-text;
+    letter-spacing: 0.2px;
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+
+// Кнопки hero (застосування стилю як у .book-demo)
+.hero-buttons {
+  align-items: center;
+  display: flex;
+
+  .book-demo {
+    background-color: $color-primary;
+    color: $color-bg;
+  }
+}
+// Додаємо ще одну змінну для другого шрифту
+$font-fancy: 'Fraunces', serif;
+
+// Hero section
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 30px 10%;
+  gap: 40px;
+  width: auto;
+  flex-wrap: wrap;
+
+  .hero-content {
+    max-width: 500px;
+    padding-top: 10px;
+    flex: 1 1 300px;
+
+    h1 {
+      width: 485px;
+      padding: 50px 0 24px;
+      font-family: $font-fancy;
+      font-size: 58px;
+      line-height: 63.8px;
+    }
+
+    p {
+      padding: 0 0 24px;
+      font-family: $font-main;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .book-demo {
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .learn-more {
+      width: 96px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $color-primary;
+      text-align: center;
+      font-family: $font-main;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0.2px;
+
+      svg {
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+// Accordion (зліва активний текст/сірий текст)
+.accordion-left-content {
+  .span-active,
+  .span-grey {
+    font-family: $font-fancy;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.2px;
+    letter-spacing: 0.2px;
+    padding-left: 16px;
+  }
+}
+
+// Hero image block
+.hero-image {
+  padding-top: 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// Accordion image block (для картинок, що підлаштовуються)
+.accordion-image {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// Trusted section
+.trusted {
+  display: flex;
+  padding: 120px 15%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 23.578px;
+  flex-shrink: 0;
+
+  .trusted-title {
+    width: 366px;
+    height: 37px;
+    flex-shrink: 0;
+    color: $color-text;
+    text-align: center;
+    font-family: $font-main;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 37.5px;
+    letter-spacing: 0.2px;
+  }
+
+  .trusted-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    img {
+      height: 24px;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Загальний стиль для тексту блоків
+.accordion-block,
+.accordion-layout,
+.feature-card {
+  font-family: $font-main;
+}
+// Додаємо додаткові кольори для карток і секцій
+$color-feature-yellow: #faea73;
+$color-feature-blue: #cceff6;
+$color-feature-pink: #f7cedc;
+$color-feature-bg: #f0f0f0;
+$color-accordion-bg: #f9fafb;
+$color-accordion-layout-bg: #f7f9fa;
+$color-grey: #626a72;
+$color-title: #1f1f1f;
+$color-title-grey: #374151;
+$color-title-active: #111827;
+$color-toggle: #9ca3af;
+$color-content: #4b5563;
+
+// Features Section
+.features {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 20px 0 120px;
+
+  .feature-card {
+    width: 390px;
+    height: 250px;
+    flex-shrink: 0;
+    padding: 30px;
+    border-radius: 4px;
+    background-color: $color-feature-bg;
+    text-align: left;
+    font-family: $font-main;
+
+    h3 {
+      padding-bottom: 10px;
+      color: $color-title;
+      font-family: $font-fancy;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 31.25px;
+      letter-spacing: 0.2px;
+    }
+
+    p {
+      width: 260px;
+      color: $color-title;
+      font-family: $font-main;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+    }
+
+    &.yellow {
+      background: $color-feature-yellow;
+    }
+    &.blue {
+      background: $color-feature-blue;
+    }
+    &.pink {
+      background: $color-feature-pink;
+    }
+  }
+}
+
+// Accordion block
+.accordion-block {
+  max-width: 360px;
+  border-top: 1px solid $color-border;
+  background-color: $color-accordion-bg;
+
+  .accordion-title {
+    color: $color-title;
+    font-family: $font-fancy;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50.4px;
+    letter-spacing: 0.2px;
+    padding-bottom: 60px;
+  }
+}
+
+// Accordion layout section
+.accordion-layout {
+  height: 694px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 20px 15%;
+  background-color: $color-accordion-layout-bg;
+  flex-wrap: wrap;
+
+  .accordion-left {
+    flex: 1 1 380px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+    span {
+      font-size: 16px;
+      color: $color-title-grey;
+    }
+  }
+
+  .accordion-image {
+    flex: 1 1 320px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Accordion header & content
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.accordion-item {
+  &.active {
+    .accordion-left span {
+      font-weight: 600;
+      color: $color-title-active;
+    }
+  }
+}
+
+.accordion-toggle {
+  font-size: 16px;
+  color: $color-toggle;
+}
+
+.accordion-content {
+  padding: 0 25px 16px 64px;
+  font-size: 14px;
+  color: $color-content;
+  line-height: 1.5;
+}
+
+.accordion-left-content {
+  display: flex;
+  align-items: center;
+
+  .span-active {
+    color: $color-title;
+  }
+  .span-grey {
+    color: $color-grey;
+  }
+}
+
+// About section (Whirl-about)
+.whirl-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 120px 10%;
+  background-color: $color-bg;
+  flex-wrap: wrap;
+  font-family: $font-main;
+
+  .about-title {
+    flex: 1 1 240px;
+
+    h2 {
+      width: 263px;
+      color: $color-title;
+      font-family: $font-fancy;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50.4px;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  .about-features {
+    flex: 2 1 600px;
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .feature {
+      flex: 1 1 200px;
+      text-align: left;
+
+      img {
+        height: 32px;
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        width: 194px;
+        color: $color-title;
+        font-family: $font-fancy;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 31.25px;
+        letter-spacing: 0.2px;
+      }
+
+      p {
+        width: 221px;
+        color: $color-title;
+        font-family: $font-main;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+      }
+    }
+  }
+}
+// Додаємо ще змінних для цього блоку
+$color-blog-link: #0070a0;
+$color-blog-tag: #2c90c9;
+$color-blog-tag-bg: #e6f7ff;
+$color-blog-card-bg: #fff;
+$color-blog-section-bg: #f7f9fa;
+$color-cta-bg: #e8f7fe;
+$color-track-bg: #0070a0;
+$color-track-content: #fff;
+$color-cta-benefit: #6b7280;
+
+// Track Block
+.track-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 80px 15%;
+  background: $color-track-bg;
+  color: $color-track-content;
+  flex-wrap: wrap;
+  font-family: $font-main;
+
+  .track-image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .track-content {
+    flex: 1 1 400px;
+
+    h2 {
+      color: $color-track-content;
+      font-family: $font-fancy;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50.4px;
+      letter-spacing: 0.2px;
+      padding-bottom: 20px;
+    }
+
+    p {
+      width: 440px;
+      color: $color-track-content;
+      font-family: $font-main;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0.2px;
+      padding-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+
+      li {
+        margin-bottom: 10px;
+        color: $color-track-content;
+        font-family: $font-main;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21.6px;
+        letter-spacing: 0.2px;
+
+        .track-text {
+          padding-left: 8px;
+        }
+      }
+    }
+
+    .track-cta {
+      text-decoration: none;
+      padding-left: 28px;
+      color: $color-track-content;
+      font-family: $font-main;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0.2px;
+    }
+  }
+}
+
+// Tasks Automated
+.tasks-automated {
+  padding: 120px 10%;
+  text-align: left;
+
+  .tasks-header {
+    h2 {
+      color: $color-title;
+      font-family: $font-fancy;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50.4px;
+      letter-spacing: 0.2px;
+      padding-bottom: 18px;
+    }
+
+    p {
+      width: 585px;
+      color: $color-title;
+      font-family: $font-main;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0.2px;
+      padding-bottom: 65px;
+    }
+  }
+
+  .tasks-grid {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 20px;
+  }
+  .tasks-grid {
+    h3 {
+      color: $color-title;
+      font-family: $font-fancy;
+      width: 194px;
+
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 31.25px;
+      letter-spacing: 0.2px;
+    }
+
+    p {
+      color: $color-title;
+      font-family: $font-main;
+      width: 221px;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+    }
+  }
+}
+
+// Blog Section
+.blog-section {
+  padding: 120px 5%;
+  background: $color-blog-section-bg;
+
+  .blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+
+    h2 {
+      color: $color-title;
+      font-family: $font-fancy;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50.4px;
+      letter-spacing: 0.2px;
+      padding-bottom: 85px;
+    }
+
+    .blog-link {
+      color: $color-blog-link;
+      text-align: center;
+      font-family: $font-main;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0.2px;
+      text-decoration: none;
+      padding-bottom: 85px;
+    }
+  }
+
+  .blog-cards {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .blog-card {
+      background: $color-blog-card-bg;
+      max-width: 355px;
+      flex: 1 1 300px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+      .blog-image {
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          height: auto;
+          padding-bottom: 85px;
+        }
+      }
+
+      .blog-content {
+        padding: 20px;
+
+        .tag {
+          display: inline-block;
+          font-size: 12px;
+          color: $color-blog-tag;
+          background: $color-blog-tag-bg;
+          padding: 4px 8px;
+          text-align: center;
+          font-family: $font-main;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          letter-spacing: 0.4px;
+        }
+
+        h3 {
+          color: $color-title;
+          font-family: $font-fancy;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 31.25px;
+          letter-spacing: 0.2px;
+          padding-bottom: 15px;
+          padding-top: 15px;
+        }
+
+        p {
+          color: $color-title;
+          font-family: $font-main;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px;
+          letter-spacing: 0.2px;
+          padding-bottom: 15px;
+        }
+
+        .date {
+          color: $color-title;
+          font-family: $font-main;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.6px;
+          letter-spacing: 0.2px;
+        }
+      }
+    }
+  }
+}
+
+// CTA Section
+.cta-wrapper {
+  padding: 120px 15%;
+  background-color: $color-bg;
+  font-family: $font-main;
+
+  .cta-box {
+    background-color: $color-cta-bg;
+    padding: 40px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+
+    h2 {
+      padding: 35px 0 0 35px;
+      color: $color-title;
+      font-family: $font-fancy;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50.4px;
+      letter-spacing: 0.2px;
+    }
+
+    p {
+      padding: 21px 0 0 35px;
+      width: 475px;
+      color: $color-title;
+      font-family: $font-main;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0.2px;
+    }
+
+    .cta-buttons {
+      padding: 35px 0 0 35px;
+
+      .cta-button {
+        display: inline-block;
+        background-color: $color-track-bg;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+    }
+
+    .cta-benefits {
+      padding: 0 0 0 35px;
+      display: flex;
+      gap: 24px;
+      font-size: 13px;
+      color: $color-cta-benefit;
+      flex-wrap: wrap;
+    }
+  }
+}
+// Footer Colors
+$color-footer-link: #0070a0;
+$color-footer-link-grey: #626a72;
+$color-footer-border: #d1d5db;
+$color-footer-bottom-border: #e5e7eb;
+$color-footer-text-secondary: #4b5563;
+
+// Footer
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 15%;
+  background-color: $color-bg;
+  font-family: $font-main;
+  color: $color-title;
+  gap: 40px;
+
+  .footer-logo {
+    img {
+      height: 32px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .footer-column {
+    flex: 1 1 180px;
+    min-width: 160px;
+
+    h4 {
+      color: $color-title;
+      font-family: $font-main;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 8px;
+
+        a {
+          width: 59px;
+          text-decoration: none;
+          color: $color-footer-link-grey;
+          font-family: $font-main;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0.2px;
+
+          &:hover {
+            color: $color-footer-link;
+          }
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    p {
+      width: 160px;
+      color: $color-title;
+      font-family: $font-main;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+      margin-bottom: 12px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      border-bottom: 1px solid $color-footer-border;
+      max-width: 240px;
+      color: $color-footer-link-grey;
+      font-family: $font-main;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+
+      input {
+        border: none;
+        background: transparent;
+        padding: 8px;
+        font-size: 14px;
+        flex: 1;
+        outline: none;
+      }
+
+      button {
+        border: none;
+        background: transparent;
+        color: $color-footer-link;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 0 8px;
+      }
+    }
+  }
+
+  .footer-credit {
+    color: $color-title;
+    font-family: $font-main;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.6px;
+    letter-spacing: 0.2px;
+
+    a {
+      color: $color-footer-link;
+      font-family: $font-main;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19.6px;
+      letter-spacing: 0.2px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Footer Bottom
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $color-footer-bottom-border;
+  padding: 20px 15%;
+  font-family: $font-main;
+  flex-wrap: wrap;
+
+  p {
+    font-size: 13px;
+    color: $color-footer-text-secondary;
+    margin: 0;
+  }
+
+  a {
+    color: $color-footer-link;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 16px;
+
+    img {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+    }
+  }
+}
